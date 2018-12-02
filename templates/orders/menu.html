@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block content %} {% load static %}
+
+<!-- Breadcrumb -->
+<section id="bc" class="mt-3">
+  <div class="container">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href=""> Home</a></li>
+        <li class="breadcrumb-item active">Pasta</li>
+        <li class="breadcrumb-item active">Pizza</li>
+      </ol>
+    </nav>
+  </div>
+</section>
+<div class="container">
+  <p class="display-4">Pasta</p>
+  <div class="card-columns">
+    {% for food in foods %}
+    <div class="card">
+      <img class="card-img-top img-fluid" " src="{{ food.img.url }}" alt="Card
+      image cap" />
+      <div class="card-body">
+        <p class="card-text lead">{{ food.name }}<br />$ {{ food.price }}</p>
+
+        <button class="btn btn-outline btn-success btn-sm">Add to cart</button>
+      </div>
+    </div>
+    {% endfor %}
+    <!--
+      <div class="card">
+          <img class="card-img-top img-fluid" " src="{% static 'img/pasta1.jpg' %}" alt="Card image cap" />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <button class="btn btn-outline btn-success btn-sm">Add to cart</button>
+          </div>
+        </div>
+        <div class="card">
+          <img class="card-img-top img-fluid" " src="{% static 'img/pasta2.jpg' %}"
+          alt="Card image cap" />
+          <div class="card-body">
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <button class="btn btn-outline btn-success btn-sm">Add to cart</button>
+          </div>
+
+        </div>
+        <div class="card">
+            <img class="card-img-top img-fluid" " src=" {% static 'img/pasta3.jpg' %}" alt="Card image cap" />
+            <div class="card-body">
+                <p class="card-text">
+                    Some quick example text to build on the card title and make up the
+                    bulk of the card's content.
+                </p>
+                <button class="btn btn-outline btn-success btn-sm">Add to cart</button>
+            </div>
+        </div>
+      </div>
+    -->
+  </div>
+  {% endblock %}
+</div>

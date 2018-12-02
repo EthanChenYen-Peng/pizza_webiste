@@ -1,0 +1,37 @@
+{% load static %}
+
+<nav
+  class="navbar navbar-expand-sm navbar-light "
+  style="background-color: #41a146;"
+>
+  <div class="container">
+    <a href="" class="nav-brand" style="color:black"
+      >Pinocchio's Pizza & Subs</a
+    >
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navNavBar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navNavBar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'orders_index' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'orders_menu' %}">Menu</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="">About</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'orders_contact' %}">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'users_register'%}">Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
